@@ -1,0 +1,95 @@
+/*
+Main Stylesheet
+*/
+
+html, body{
+	margin:0;
+	padding:0;
+	font-size:14px;
+}
+
+.header{
+	background: #2F71AB;
+	height:80px;
+}
+.header p{
+	text-transform:uppercase;
+	color:#fff;
+	font-size:2em;
+	padding-top:15px;
+}
+
+h1{
+	position:absolute;
+	left:-10000px;
+}
+h2{
+	text-transform:uppercase;
+	text-align:center;
+	padding:20px;
+}
+.wrapper{
+	margin: 0px 60px;
+}
+
+.game-links .row{
+	text-align:center;
+	width:660px;
+	margin:0 auto;
+	padding: 20px;
+	background: #2F71AB;
+}
+
+.portfolio-links .row{
+	text-align:center;
+	width:660px;
+	margin:0 auto;
+	padding: 20px;
+	background: #2F71AB;
+}
+.row a{
+	color:white;
+}
+.row a:hover{
+	color:white;
+}
+
+.nav-tabs li{
+	width:50%;
+	float:left;
+	background:#000;
+}
+.nav-tabs li a{
+	display:block;
+	margin:0 auto;
+	text-align:center;
+}
+
+
+footer{
+	height:80px;
+	padding:20px;
+	margin-top:20px;
+	background: #2F71AB;
+}
+footer p{
+	color:white;
+	text-align:center;
+}
+
+@media (max-width:900px){
+	.game-links .row,
+	.portfolio-links .row{
+		width:auto;
+	}
+	.about .nav-tabs,
+	.about .tab-pane{
+		width:100%;
+	}
+	footer{
+		height:auto;
+	}
+
+
+
+}

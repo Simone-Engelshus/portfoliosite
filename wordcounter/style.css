@@ -1,0 +1,26 @@
+/*
+Word Counter Stylesheet
+*/
+
+body{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+	background:#2F71AB;
+}
+.back{
+	color:white;
+	text-decoration:none;
+}
+.countContainer{
+	margin:0 auto;
+	width:600px;
+}
+h2{
+	text-align:center;
+	color:white;
+}
+#input{
+	width:100%;
+	font-family:sans-serif;
+}
