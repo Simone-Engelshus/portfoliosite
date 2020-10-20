@@ -16,11 +16,24 @@ body{
 	margin:0 auto;
 	width:600px;
 }
-h2{
-	text-align:center;
-	color:white;
+.countContainer .test-area{
+	color:#fff;
 }
-#input{
+.test-wrapper textarea{
 	width:100%;
 	font-family:sans-serif;
+
+}
+h2{
+	color:white;
+}
+#clock{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+#reset{
+	background:#fff;
+	color:#2F71AB;
+	padding:10px;
+	border:none;
 }
