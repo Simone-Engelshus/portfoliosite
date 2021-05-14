@@ -3,10 +3,11 @@
   padding: 0; }
 
 body {
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  background: #666; }
 
 h1 {
-  color: blue;
+  color: #4864e0;
   font-size: 1.5em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -16,7 +17,8 @@ h2 {
   color: #666;
   font-size: 1.5em;
   padding-top: 0.5em;
-  padding-bottom: 0.5em; }
+  padding-bottom: 0.5em;
+  text-align: center; }
 
 p {
   padding-top: 0.5em;
@@ -31,23 +33,28 @@ footer {
 
 footer {
   clear: both; }
+  footer p {
+    text-align: center; }
 
 section {
   padding: 1em; }
 
 .wrapper {
   padding: 0px 40px 0px 40px; }
+  .wrapper .contact-box {
+    padding: 30px;
+    background: #fff;
+    max-width: 80%;
+    margin: 0 auto; }
 
 /* Navigation */
 nav {
   text-align: right; }
-
-nav li {
-  display: inline-block;
-  padding-right: 1em; }
-
-nav a {
-  color: #000099; }
+  nav li {
+    display: inline-block;
+    padding-right: 1em; }
+    nav li a {
+      color: #000099; }
 
 /* Forms */
 label {
@@ -56,7 +63,7 @@ label {
   clear: both;
   text-align: right;
   margin: 0.6em 0.6em 0 0;
-  width: 200px;
+  width: 230px;
   padding: 0.2em; }
 
 input,
@@ -72,7 +79,7 @@ textarea {
   padding: 0.5em; }
 
 fieldset {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px; }
 
@@ -97,7 +104,11 @@ input[type="radio"] {
 
 input[type="submit"],
 input[type="reset"] {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  background: #4864e0;
+  padding: 10px;
+  border: 0;
+  color: #fff; }
 
 .radioLabel {
   width: auto;
@@ -119,6 +130,9 @@ input[type="reset"] {
   width: 100%;
   clear: both;
   float: right;
-  margin-right: 60px; }
+  margin-right: 160px; }
+  .form-buttons p {
+    float: right;
+    margin-right: 20px; }
 
 /*# sourceMappingURL=stylesheet.css.map */
