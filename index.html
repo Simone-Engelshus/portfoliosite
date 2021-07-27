@@ -1,129 +1,155 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<title>Simone's Portfolio Site</title>
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
 	<style>
-.nav-tabs
- {
-   border-color:#D6E6F3;
-   width:60%;
-   margin:0 auto;
- }
+		.nav-tabs {
+			border-color: #D6E6F3;
+			width: 60%;
+			margin: 0 auto;
+		}
 
-.nav-tabs > li a { 
-    border: 1px solid #D6E6F3;
-    background-color:#2F71AB; 
-    color:#fff;
-	padding:20px;
-    }
+		.nav-tabs>li a {
+			border: 1px solid #D6E6F3;
+			background-color: #2F71AB;
+			color: #fff;
+			padding: 20px;
+		}
 
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > a:hover{
-    background-color:#D6E6F3;
-    color:#000;
-    border: 1px solid #D6E6F3;
-    border-bottom-color: transparent;
-    }
+		.nav-tabs>li.active>a,
+		.nav-tabs>li.active>a:focus,
+		.nav-tabs>li.active>a:hover {
+			background-color: #D6E6F3;
+			color: #000;
+			border: 1px solid #D6E6F3;
+			border-bottom-color: transparent;
+		}
 
-.nav-tabs > li > a:hover{
-  background-color: #D6E6F3 !important;
-    color:#000;
+		.nav-tabs>li>a:hover {
+			background-color: #D6E6F3 !important;
+			color: #000;
 
-} 
+		}
 
-.tab-pane {
-    border:solid 1px #D6E6F3;
-    border-top: 0; 
-    width:60%;
-    background-color:#D6E6F3;
-    padding:20px;
-	margin:0 auto;
+		.tab-pane {
+			border: solid 1px #D6E6F3;
+			border-top: 0;
+			width: 60%;
+			background-color: #D6E6F3;
+			padding: 20px;
+			margin: 0 auto;
 
-}
-.tab-content {
-	margin: 0 auto;
-}
-</style>
+		}
+
+		.tab-content {
+			margin: 0 auto;
+		}
+	</style>
 </head>
+
 <body>
-	<div class= "header">
-	<div class="wrapper">
-		<div class="logo">
-			<p>Simone's Portfolio Site</p>
+	<div class="header">
+		<div class="wrapper">
+			<div class="logo">
+				<p>Simone's Web Development Projects</p>
+			</div>
 		</div>
 	</div>
-	</div>
 	<div class="wrapper">
-	<h1>Simone's Portfolio Site</h1>
+		<h1>Simone's Web Development Projects</h1>
 		<section class="game-links">
 			<div class="container">
-				<h2>Welcome! Try out these code games:</h2>
-					<div class="row">
-						<div class="col">
-							<a href="quiz/quiz.html">Quiz</a>
-						</div>
-						<div class="col">
-							<a href="typetest/index.html">Type Speed Test</a>
-						</div>
+				<div class="textbox">
+					<p>A collection of my past and in-progress web development projects.</p>
+					<p>Feel free to click on a link below to check them out.</p>
+				</div>
+				<div class="row">
+					<div class="col">
+						<a href="quiz/quiz.html">Quiz</a>
 					</div>
+					<div class="col">
+						<a href="typetest/index.html">Type Speed Test</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<a href="api/map.html">International Space Station Map</a>
+					</div>
+					<div class="col">
+						<a href="calculator/index.html">Currency Converter</a>
+					</div>
+				</div>
 			</div>
 		</section>
-		
+
 		<script>
-		$(document).ready(function(){
-	
-	$('a[href="#skillstab"]').tab('show') 
+			$(document).ready(function () {
 
-});
+				$('a[href="#skillstab"]').tab('show')
 
-		
+			});
+
+
 		</script>
-				<section class="about">
-						<div class="container">
-							<h2>Here's a bit about me</h2>
-							<ul class="nav nav-tabs" role="tablist">
-							 <li><a href="#skillstab" role="tab" data-toggle="tab">Skills</a></li>	
-		 
-							<li><a href="#exptab" role="tab" data-toggle="tab">Experience</a></li>
-							 
-		 
-		
-							</ul>
-							</li>
-					
-						<div class="tab-content">
-						  <div class="tab-pane fade" id="skillstab"><p>I have developed at least some level of understanding of the following areas of coding:</p><p>HTML, CSS, Javascript (ES5, ES6), PHP, jQuery, SQL, Git, Bootstrap, Sass/Scss, Vue.js</p>
-							<p>In addition, I have some experience & knowledge in the following areas:</p><p>SEO development, digital marketing, cybersecurity, copywriting, web design & graphic design</p></div>
-						  <div class="tab-pane fade in active" id="exptab"><p>- Wordpress Website prototype for Fast Automation (2016)</p>
-							  <p>- Guru Labels Home site and micro sites (2018) <a href="https://gurulabels.com.au/">Guru Labels Website</a></p>
-							  <p>- Diploma of Web Development Website Project 'Sports Warehouse'(2020)</p>
-						</div>
- 
-						</div>
-			
+		<section class="about">
+			<div class="container">
+				<div class="textbox">
+					<p>Here's a bit more information about me & my Web Dev background</p>
+				</div>
+				<ul class="nav nav-tabs" role="tablist">
+					<li><a href="#skillstab" role="tab" data-toggle="tab">Skills</a></li>
+
+					<li><a href="#exptab" role="tab" data-toggle="tab">Experience</a></li>
+
+
+
+				</ul>
+				</li>
+
+				<div class="tab-content">
+					<div class="tab-pane fade" id="skillstab">
+						<p>I have developed at least some level of understanding of the following areas of coding:</p>
+						<p>HTML, CSS, Javascript (ES5, ES6), PHP, jQuery, SQL, Git, Bootstrap, Sass/Scss, Vue.js</p>
+						<p>In addition, I have some experience & knowledge in the following areas:</p>
+						<p>SEO development, digital marketing, cybersecurity, copywriting, web design & graphic design
+						</p>
+					</div>
+					<div class="tab-pane fade in active" id="exptab">
+						<p>- Wordpress Website prototype for Fast Automation (2016)</p>
+						<p>- Guru Labels Home site and micro sites (2018) <a href="https://gurulabels.com.au/">Guru
+								Labels Website</a></p>
+						<p>- Diploma of Web Development Website Project 'Sports Warehouse'(2020)</p>
+						<p>- Web Development internship working on client's websites (2020-2021)</p>
+					</div>
+
+				</div>
+
 		</section>
 		<section class="portfolio-links">
-						<div class="container">
+			<div class="container">
 				<h2>Feel free to also check out my online graphic & web design portfolio</h2>
-					<div class="row">
-						<div class="col">
-							<a href="http://simone-design.000webhostapp.com/">Portfolio Link</a>
-						</div>
+				<div class="row">
+					<div class="col">
+						<a href="http://simone-design.000webhostapp.com/">Portfolio Link</a>
 					</div>
+				</div>
 			</div>
 		</section>
 	</div>
-<footer>
-	<div class="wrapper">
-		<p>Thanks for visiting. This site was built using HTML, CSS, Javascript and Bootstrap.</p>
-	</div>
-</footer>
+	<footer>
+		<div class="wrapper">
+			<p>Thanks for visiting. This site was built using HTML, CSS, Javascript and Bootstrap.</p>
+		</div>
+	</footer>
 </body>
 
 </html>

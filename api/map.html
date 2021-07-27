@@ -1,58 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
     <style>
         #issMap {
-            height: 180px;
+            height: 380px;
+        }
+
+        body {
+            background-color: #2F71AB;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #fff;
+        }
+
+        .container {
+            margin: 20px 20%;
+        }
+
+        .container .header {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .container .header p {
+            text-transform: uppercase;
+            font-size: 1.2em;
         }
     </style>
     <title>JSON API Map</title>
-    
+
 </head>
+
 <body>
-    <h1>Where is the International Space Station?</h1>
-    <p>
-        latitude: <span id="lat"></span><br />
-        longitude: <span id="lon"></span>
-    </p>
-    <div id="issMap"></div>
-    <script>
-        const mymap = L.map('issMap').setView([0, 0], 1);
-        const marker = L.marker([0, 0]).addTo(mymap);
+    <div class="container">
+        <div class="header">
+            <h1>Where is the International Space Station?</h1>
+            <p>
+                latitude: <span id="lat"></span><br />
+                longitude: <span id="lon"></span>
+            </p>
+        </div>
+        <div id="issMap"></div>
+        <script>
+            const mymap = L.map('issMap').setView([0, 0], 1);
+            const marker = L.marker([0, 0]).addTo(mymap);
 
-        const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-         const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-         const tiles = L.tileLayer(tileUrl, { attribution });
-         tiles.addTo(mymap); 
-        const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
-        let firstTime = true;
+            const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+            const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+            const tiles = L.tileLayer(tileUrl, { attribution });
+            tiles.addTo(mymap);
+            const api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
+            let firstTime = true;
 
-        async function getISS() {
-            const response = await fetch(api_url);
-            const data = await response.json();
-            const { latitude, longitude } = data;
+            async function getISS() {
+                const response = await fetch(api_url);
+                const data = await response.json();
+                const { latitude, longitude } = data;
 
-            marker.setLatLng([latitude, longitude]);
-            if (firstTime) {
-                mymap.setView([latitude, longitude], 5);
-                firstTime = false;
-            };
-            document.getElementById('lat').textContent = latitude;
-            document.getElementById('lon').textContent = longitude;
-        }
-        
-        getISS();
+                marker.setLatLng([latitude, longitude]);
+                if (firstTime) {
+                    mymap.setView([latitude, longitude], 3);
+                    firstTime = false;
+                };
+                document.getElementById('lat').textContent = latitude;
+                document.getElementById('lon').textContent = longitude;
+            }
 
-        setInterval(getISS, 1000);
-    </script>
+            getISS();
+
+            setInterval(getISS, 1000);
+        </script>
+    </div>
 </body>
+
 </html>
