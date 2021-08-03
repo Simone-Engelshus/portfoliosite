@@ -5,7 +5,7 @@ let cats = [];
 // let ball2;
 
 function preload() {
-    $bg = loadImage('space/space.jpg');
+    $bg = loadImage('space/spacebg.jpg');
     for (let i = 0; i < 4; i++) {
         cats[i] = loadImage('cats/cat' + i + '.png');
     }
