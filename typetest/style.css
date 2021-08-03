@@ -6,7 +6,7 @@ body{
 	font-size: 20px;
 	font-family: sans-serif;
 	color: #333;
-	background:#2F71AB;
+	background:#2a7cc4;
 }
 .back{
 	color:white;
@@ -33,7 +33,15 @@ h2{
 }
 #reset{
 	background:#fff;
-	color:#2F71AB;
+	color:#2a7cc4;
 	padding:10px;
 	border:none;
+}
+@media screen and (max-width: 700px) {
+	.countContainer{
+		width:auto;
+	}
+	.countContainer .test-area{
+		padding:20px;
+	}
 }

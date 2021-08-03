@@ -13,8 +13,10 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(600, 400);
+    let cnv = createCanvas(600, 400);
+    cnv.position(0, 0, 'static');
 
+    // cnv.center();
     // for (let i = 0; i < 10; i++) {
     //     let x = 300 + i + i;
     //     let y = 200 + i + i;
@@ -24,9 +26,26 @@ function setup() {
     // }
 }
 
+var ballSpeedX = 6;
+
+function increaseSpeed() {
+    ballSpeedX++;
+    return ballSpeedX;
+}
+function decreaseSpeed() {
+    if (ballSpeedX > 0) {
+        ballSpeedX--;
+        return ballSpeedX;
+    }
+    else {
+        return ballSpeedX;
+    }
+}
+
+
 function mousePressed() {
     let cat = random(cats);
-    let b = new Ball(mouseX, mouseY, 6, -3, cat);
+    let b = new Ball(mouseX, mouseY, ballSpeedX, -3, cat);
     balls.push(b);
     for (let i = 0; i < balls.length; i++) {
         if (balls[i].contains(mouseX, mouseY)) {
@@ -34,6 +53,7 @@ function mousePressed() {
         }
     }
 }
+
 // ball1 = new Ball(300, 200, 6, -3);
 // ball2 = new Ball(200, 100, 3, -2);
 
@@ -53,6 +73,19 @@ function draw() {
 }
 
 
+var ballWidth = 50;
+var ballHeight = 50;
+
+function increaseSize() {
+    ballWidth++;
+    ballHeight++;
+    return ballWidth, ballHeight;
+}
+function decreaseSize() {
+    ballWidth--;
+    ballHeight--;
+    return ballWidth, ballHeight;
+}
 
 class Ball {
     constructor(x, y, xspeed, yspeed, img) {
@@ -78,7 +111,7 @@ class Ball {
     }
 
     display() {
-        image(this.cat, this.x, this.y, 60, 60);
+        image(this.cat, this.x, this.y, ballWidth, ballHeight);
         // stroke(255);
         // strokeWeight(4);
         // ellipse(this.x, this.y, 24, 24);
@@ -93,4 +126,5 @@ class Ball {
 function clearArray() {
     return balls = [];
 }
+
 

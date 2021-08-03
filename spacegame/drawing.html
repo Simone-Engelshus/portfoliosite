@@ -1,0 +1,135 @@
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+  <script src="bouncing_ball.js"></script>
+  <style>
+    body {
+      background-color: #2a7cc4;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      margin: 20px 20%;
+    }
+
+    .container .header {
+      text-align: center;
+      line-height: 30px;
+    }
+
+    .p5Canvas {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons .container {
+      margin: 0 auto;
+      display: block;
+      width: 55%;
+    }
+
+    .buttons .row {
+      margin: 0 auto;
+      width: 42%;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .buttons .row-one {
+      width: 50%;
+      float: left;
+    }
+
+    .buttons .row-two {
+      float: left;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .buttons h3 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .functionBtn {
+      padding: 15px 8px;
+      background-color: #2a7cc4;
+      color: #fff;
+      border: 1px solid #fff;
+      margin: 0 3%;
+    }
+
+    .functionBtn:active {
+      background-color: #fff;
+    }
+
+    @media screen and (max-width: 1800px) {
+      .buttons .container {
+        width: 100%;
+      }
+    }
+
+    @media (max-width:900px) {
+      .container {
+        margin: 20px 10%;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .container {
+        margin: 0;
+      }
+
+      .p5Canvas {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+    }
+
+    @media screen and (max-width: 700px) {
+      .functionBtn {
+        display: block;
+        margin: 0 auto;
+        width: 78%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Make some space</h1>
+      <h2>Click anywhere in the space below!</h2>
+    </div>
+    <main>
+
+    </main>
+    <div class="buttons">
+      <div class="container">
+        <h3>Controls</h3>
+        <div class="row row-one">
+          <button class="functionBtn" onclick="increaseSpeed();">Increase Speed</button>
+          <button class="functionBtn" onclick="decreaseSpeed();">Decrease Speed</button>
+        </div>
+        <div class="row row-one">
+          <button class="functionBtn" onclick="increaseSize();">Increase Size</button>
+          <button class="functionBtn" onclick="decreaseSize();">Decrease Size</button>
+        </div>
+        <div class="row row-two">
+          <button class="functionBtn" onclick="clearArray();">Clear the Space</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

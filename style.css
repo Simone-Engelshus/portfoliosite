@@ -9,7 +9,7 @@ html, body{
 }
 
 .header{
-	background: #2F71AB;
+	background: #2a7cc4;
 	height:80px;
 }
 .header p{
@@ -42,12 +42,13 @@ h2{
 	text-align:center;
 	width:660px;
 	margin:0 auto;
-	background: #2F71AB;
+	background: #2a7cc4;
 }
 .game-links .row .col{
 	padding:0;
 	border:1px solid #D6E6F3;
 }
+
 .game-links .row .col:hover,
 .game-links .row .col:focus{
 	background-color: #D6E6F3;
@@ -62,6 +63,23 @@ h2{
 	height:100%;
 	padding:20px;
 }
+.portfolio-links .row .col a{
+	width:100%;
+	padding:20px;
+	display:block;
+}
+.portfolio-links .row .col{
+	padding:0;
+	border:1px solid #D6E6F3;
+}
+.portfolio-links .row .col a:hover,
+.portfolio-links .row .col a:focus{
+	background-color: #D6E6F3;
+	border-bottom-color: transparent;
+}
+.portfolio-links .row .col a:hover{
+	color: #000;
+}
 .nav-tabs {
 	border-color: #D6E6F3;
 	width: 60%;
@@ -70,7 +88,7 @@ h2{
 
 .nav-tabs>li a {
 	border: 1px solid #D6E6F3;
-	background-color: #2F71AB;
+	background-color: #2a7cc4;
 	color: #fff;
 	padding: 20px;
 }
@@ -107,7 +125,7 @@ h2{
 	text-align:center;
 	width:660px;
 	margin:0 auto;
-	background: #2F71AB;
+	background: #2a7cc4;
 }
 
 .row a{
@@ -133,7 +151,7 @@ footer{
 	height:80px;
 	padding:20px;
 	margin-top:20px;
-	background: #2F71AB;
+	background: #2a7cc4;
 }
 footer p{
 	color:white;
@@ -152,7 +170,4 @@ footer p{
 	footer{
 		height:auto;
 	}
-
-
-
 }

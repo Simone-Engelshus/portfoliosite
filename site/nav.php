@@ -2,7 +2,7 @@
             <div class="header">
                 <div class="container">
                     <div class="logo">
-                        <a href="index.php"><img src="images/selogo_small_whitever.png" alt="Simone Engelshus Logo"></a>
+                        <a href="<?php print "{$base_url}";?>"><img src="images/selogo_small_whitever.png" alt="Simone Engelshus Logo"></a>
                     </div>
                     <div class="navigation" id="navigation">
                         <div class="button"></div>

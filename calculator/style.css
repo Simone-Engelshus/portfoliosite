@@ -4,6 +4,7 @@ body {
   margin: 100px auto;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #2a7cc4;
 }
 h2 {
   text-transform: uppercase;
@@ -30,8 +31,9 @@ span {
   font-weight: 900;
 }
 .container {
-  background-color: #4279bc;
+  border: 1px solid #fff;
   height: 300px;
+  margin: 0 auto;
 }
 h1 {
   color: white;
@@ -44,7 +46,7 @@ h1 {
 }
 #exchange {
   border: none;
-  color: #4279bc;
+  color: #2a7cc4;
   background-color: white;
   margin-bottom: 20px;
 }
