@@ -95,7 +95,14 @@ h2{
 
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:hover {
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:active {
+	background-color: #D6E6F3;
+	color: #000;
+	border: 1px solid #D6E6F3;
+	border-bottom-color: transparent;
+}
+.about .nav-tabs li .show{
 	background-color: #D6E6F3;
 	color: #000;
 	border: 1px solid #D6E6F3;
