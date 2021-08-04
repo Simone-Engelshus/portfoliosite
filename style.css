@@ -28,6 +28,7 @@ h2{
 	text-transform:uppercase;
 	text-align:center;
 	padding:20px;
+	font-size:1.8em;
 }
 .wrapper{
 	margin: 0px 60px;
@@ -62,6 +63,9 @@ h2{
 	width:100%;
 	height:100%;
 	padding:20px;
+}
+.portfolio-links h2{
+	font-size:1.6em;
 }
 .portfolio-links .row .col a{
 	width:100%;
@@ -155,9 +159,9 @@ h2{
 
 
 footer{
-	height:80px;
+	height:100px;
 	padding:20px;
-	margin-top:20px;
+	margin-top:50px;
 	background: #2a7cc4;
 }
 footer p{
